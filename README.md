@@ -1,1 +1,1 @@
-hello world in C
+ This is a directory where I apply arrays and pointer
