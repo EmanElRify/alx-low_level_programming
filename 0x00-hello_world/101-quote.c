@@ -7,7 +7,6 @@
  */
 int main(void)
 {
-	char s[] = "and that piece of art is useful/" - Dora Korpar, 2015-10-19";
-	putchar(s);
+	fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
 	return (1);
 }
