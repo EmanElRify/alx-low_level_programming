@@ -7,12 +7,19 @@
  */
 int main(void)
 {
-	char hexa = 0x0;
+	char n, a;
 
-	while (hexa <= 0xf)
+	n = 0;
+	a = 'a';
+	while (n <= 9)
 	{
-		putchar(hexa + '0x0');
-		hexa = hexa + 0x1;
+		putchar(n + '0');
+		n++;
+	}
+	while (a <= 'f')
+	{
+		putchar(a);
+		a++;
 	}
 	putchar('\n');
 	return (0);
