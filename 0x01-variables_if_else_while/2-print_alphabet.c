@@ -9,10 +9,11 @@ int main(void)
 {
 	char c = 'a';
 
-	while (c < 'z')
+	while (c <= 'z')
 	{
-		printf("%c", c);
+		putchar("%c", c);
 		c++;
 	}
+	putchar("\n");
 	return (0);
-}
+i}
