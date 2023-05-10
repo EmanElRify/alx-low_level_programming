@@ -24,6 +24,6 @@ void print_alphabet(void)
  */
 int main(void)
 {
-	_print_alphabet();
+	print_alphabet();
 	return (0);
 }
