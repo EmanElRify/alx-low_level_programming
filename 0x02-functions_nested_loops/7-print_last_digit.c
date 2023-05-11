@@ -6,7 +6,7 @@
  * @n: an integer number
  * Return: Last digit of a number
  */
-int print_last_digit(long int n)
+int print_last_digit(int n)
 {
 	int d;
 
