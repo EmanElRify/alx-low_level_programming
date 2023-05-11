@@ -17,7 +17,7 @@ void times_table(void)
 		for (j = 0; j < 10; j++)
 		{
 			product = i * j;
-			if (product > 9)
+			if ((product > 9) || ((i * (j + 1)) > 9))
 			{
 				_putchar((product / 10) + '0');
 				_putchar((product % 10) + '0');
