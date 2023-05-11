@@ -21,18 +21,22 @@ void times_table(void)
 			{
 				_putchar((product / 10) + '0');
 				_putchar((product % 10) + '0');
+				count++;
+				if (count == 10)
+					break;
+				_putchar(',');
+				_putchar(' ');
 			}
 			else
 			{
 				_putchar(product + '0');
+				count++;
+				if (count == 10)
+					break;
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 			}
-			count++;
-			if (count == 10)
-			{
-				break;
-			}
-			_putchar(',');
-			_putchar(' ');
 		}
 		_putchar('\n');
 	}
