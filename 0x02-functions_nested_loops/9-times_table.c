@@ -14,28 +14,29 @@ void times_table(void)
 	{
 		int count = 0;
 
-		for (j = 0; j < 10; j++)
+		_putchar('0');
+		for (j = 1; j < 10; j++)
 		{
 			product = i * j;
-			if ((product > 9) || ((i * (j + 1)) > 9))
+			if (product > 9)
 			{
+				_putchar(',');
+				_putchar(' ');
 				_putchar((product / 10) + '0');
 				_putchar((product % 10) + '0');
 				count++;
 				if (count == 10)
 					break;
-				_putchar(',');
-				_putchar(' ');
 			}
 			else
 			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 				_putchar(product + '0');
 				count++;
 				if (count == 10)
 					break;
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
 			}
 		}
 		_putchar('\n');
