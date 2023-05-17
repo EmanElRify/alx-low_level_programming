@@ -1,2 +1,11 @@
-int _strlen(char *s);
+#include "main.h"
 
+/**
+ * _strlen - length of a string
+ * @s: string
+ * Return: 0
+ */
+int _strlen(char *s)
+{
+	return (0);
+}
