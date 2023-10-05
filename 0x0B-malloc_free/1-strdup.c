@@ -9,9 +9,9 @@
 char *_strdup(char *str)
 {
 	char *p;
-	unsigned int i, len;
+	unsigned int n, len;
 
-	i = 0;
+	n = 0;
 	len = 0;
 	if (str == NULL)
 	{
@@ -19,16 +19,15 @@ char *_strdup(char *str)
 	}
 	while (str[len])
 	{
-		len++;
+		len++:
 	}
-	p = malloc(sizeof(char) * (len + 1));
+	p = (char *)malloc(sizeof(char) * (len + 1));
 	if (p == NULL)
 	{
 		return (NULL);
 	}
-	while ((p[i] = str[i]) != '\0')
-	{
-		i++;
-	}
+	while ((p[n] = str[n]) != '\0')
+		n++;
+
 	return (p);
 }
