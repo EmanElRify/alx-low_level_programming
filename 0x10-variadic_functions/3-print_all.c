@@ -10,12 +10,12 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i = 0;
-	char * x;
+	char *x;
 
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
-		switch(format[i])
+		switch (format[i])
 		{
 			case 'i':
 				printf("%d", va_arg(args, int));
@@ -36,7 +36,8 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(args, double));
 				break;
 		}
-		if (format[i + 1] != '\0' && (format[i] == 'i' || format[i] == 'c' || format[i] == 's' || format[i] == 'f'))
+		if (format[i + 1] != '\0' && (format[i] == 'i' || format[i] == 'c'
+					|| format[i] == 's' || format[i] == 'f'))
 		{
 			printf(", ");
 		}
