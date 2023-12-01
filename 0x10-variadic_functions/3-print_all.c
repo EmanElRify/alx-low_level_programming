@@ -13,17 +13,14 @@ void print_all(const char * const format, ...)
 	char *x;
 	int flag;
 
-	
 	flag = 0;
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
 		if ((format[i + 1] != '\0' || format[i + 1] == 'i' || format[i + 1] == 'c'
 					|| format[i + 1] == 's' || format[i + 1] == 'f') && flag == 1)
-		{
 			printf(", ");
-			flag = 0;
-		}
+		flag = 0;
 		switch (format[i])
 		{
 			case 'i':
@@ -52,6 +49,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-
 	va_end(args);
 }
