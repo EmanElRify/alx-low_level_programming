@@ -17,18 +17,16 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
+		flag = 1;
 		switch (format[i])
 		{
 			case 'i':
 				printf("%d", va_arg(args, int));
-				flag = 1;
 				break;
 			case 'c':
 				printf("%c", va_arg(args, int));
-				flag = 1;
 				break;
 			case 's':
-				flag = 1;
 				x = va_arg(args, char *);
 				if (x == NULL)
 				{
@@ -38,9 +36,10 @@ void print_all(const char * const format, ...)
 				printf("%s", x);
 				break;
 			case 'f':
-				flag = 1;
 				printf("%f", va_arg(args, double));
 				break;
+			default:
+				flag = 0;
 		}
 		if (format[i + 1] != '\0' && flag == 1)
 			printf(", ");
