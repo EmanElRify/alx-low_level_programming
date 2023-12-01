@@ -42,7 +42,7 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(args, double));
 				break;
 		}
-		if ((format[i + 1] != '\0' && flag == 1)
+		if (format[i + 1] != '\0' && flag == 1)
 			printf(", ");
 		i++;
 	}
