@@ -36,8 +36,8 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(args, double));
 				break;
 		}
-		if (format[i + 1] != '\0' && (format[i] == 'i' || format[i] == 'c'
-					|| format[i] == 's' || format[i] == 'f'))
+		if (format[i + 1] != '\0' && (format[i + 1] == 'i' || format[i + 1] == 'c'
+					|| format[i + 1] == 's' || format[i + 1] == 'f'))
 		{
 			printf(", ");
 		}
